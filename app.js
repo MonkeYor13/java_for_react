@@ -5,7 +5,6 @@ function hello() {
 	console.log("first");
 	console.log("second");
 }
-
 hello();
 
 // retonar una valor, se puede (1)guardar en una variable y luego mostrarla ó (2) colocarla dentro de un console
@@ -14,7 +13,6 @@ hello();
 function hello2() {
 	return "hola mundo";
 }
-
 const result = hello2();
 console.log(result);
 
@@ -28,13 +26,9 @@ function hello3() {
 		return "hola estyo retornando una function dentro de otra funtion";
 	};
 }
-
 console.log(hello3()());
 
 // funciones pasando parametros
-function name(params) {}
-
-// fumcion con parametros
 function hello4(name) {
 	return "hello " + name;
 }
