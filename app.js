@@ -1,5 +1,6 @@
 // // las funciones no solo ejecutan codigo y si no tambien que retornan
 
+
 // // ejecuatar codigo
 // function hello() {
 // 	console.log("first");
@@ -109,16 +110,59 @@
 // document.body.append(title)
 // document.body.append(button)
 
-// DESTRUCTURANDO, podemos retoanr etiqwuetas HTML desde una funcion o direcmanete al body del documento
+// DESTRUCTURANDO un Objetos, podemos obtener todos los valores de una objeto, tambien podemos obtener valores especificos de un objeto  y es alli odnde destroturamos el objeto.
 
-const user = {
-	name: "yorvis",
-	age: 38,
-};
+// const user = {
+// 	name: "yorvis",
+// 	age: 38,
+// };
+// const user2 = {
+// 	name: "yorvis2",
+// 	age: 60,
+// 	tall: 168,
+// };
 
-function printInfo(user) {
-	return "<h1>Hola " + user.name + "</h1>";
+// // podemos retornar una etiqueta y obtener todos los valores del objeto llamando al objeto 'user'
+// function printInfo(user) {
+// 	// return "<h1>Hola " + user.name + "</h1>";
+// 	// podemos acceder tambien usando corchetes
+// 	return "<h1>Hola " + user["age"] + "</h1>";
+// }
+// console.log(printInfo(user));
+// document.body.innerHTML = printInfo(user);
+// // document.body.innerHTML = "<h1>Hola soy una etiqueta directa</h1>";
+
+// // aplicamos la destructuracion y le pasomos entre {} los valores que quedmos extraer del objeto y luego los retonarmos.
+// function printInfo2({age, name}) {
+// 	return "<h1>Hola " + age +" "+ name + "</h1>";
+// }
+// console.log(printInfo2(user2));
+// document.body.innerHTML = printInfo2(user2);
+
+
+// FUNCIONES ANONIMAS, se suele usar muchos en los llamados en los eventos litseninig para los botones.
+
+// funcion normal llamada start
+function start() {
+	return 'Starting..'
 }
-console.log(printInfo(user));
-document.body.innerHTML = printInfo(user);
-// document.body.innerHTML = "<h1>Hola soy una etiqueta directa</h1>";
+console.log(start())
+
+// una funcion anonima sin nombre
+console.log((function() {
+	return 'Starting..'
+}()))
+
+
+const button = document.createElement('button')
+button.innerText = 'click me'
+
+button.addEventListener ('click', function () {
+	console.log('clicked')
+	alert('clicked')
+})
+
+document.body.append(button)
+
+// arrow function o funciones flechas
+
