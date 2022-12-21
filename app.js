@@ -1,6 +1,5 @@
 // // las funciones no solo ejecutan codigo y si no tambien que retornan
 
-
 // // ejecuatar codigo
 // function hello() {
 // 	console.log("first");
@@ -139,30 +138,82 @@
 // console.log(printInfo2(user2));
 // document.body.innerHTML = printInfo2(user2);
 
+// // FUNCIONES ANONIMAS, se suele usar muchos en los llamados en los eventos litseninig para los botones.
 
-// FUNCIONES ANONIMAS, se suele usar muchos en los llamados en los eventos litseninig para los botones.
+// // funcion normal llamada start
+// function start() {
+// 	return "Starting..";
+// }
+// console.log(start());
 
-// funcion normal llamada start
-function start() {
-	return 'Starting..'
-}
-console.log(start())
+// // una funcion anonima sin nombre
+// console.log(
+// 	(function () {
+// 		return "Starting..";
+// 	})()
+// );
 
-// una funcion anonima sin nombre
-console.log((function() {
-	return 'Starting..'
-}()))
+// const button = document.createElement("button");
+// button.innerText = "click me";
 
+// button.addEventListener("click", function () {
+// 	console.log("clicked");
+// 	alert("clicked");
+// });
 
-const button = document.createElement('button')
-button.innerText = 'click me'
+// document.body.append(button);
 
-button.addEventListener ('click', function () {
-	console.log('clicked')
-	alert('clicked')
-})
+// // ARRAW FUNCTION O FUNCIONES FLECHAS () =>
+// function add(x, y) {
+// 	return x + y;
+// }
+// console.log(add(1, 2));
 
-document.body.append(button)
+// let add2 = (x, y) => x + y;
+// console.log(add2(3, 5));
 
-// arrow function o funciones flechas
+// let showText = () => "Hola yorvis";
+// let showNumber = () => 39;
+// let showBoolean = () => true;
+// let showArray = () => [1, 2, 3, 4, 5];
+// //*cuando se quiere llamar a una objeto va dentro de ()
+// let showObjet = () => ({ name: "yorvis" });
 
+// console.log(showText());
+// console.log(showNumber());
+// console.log(showBoolean());
+// console.log(showArray());
+// console.log(showObjet());
+
+// // RETONAR EN FUNCIONES Y CONDICIONAL
+
+// const isAutorized = true;
+// let buttonReturn = document.createElement("button");
+// buttonReturn.innerText = "return";
+
+// buttonReturn.addEventListener("click", () => {
+// 	if (isAutorized) {
+// 		return alert("esta autorizado");
+// 	}
+// 	alert("no esta autorizado");
+// });
+// document.body.append(buttonReturn);
+
+// AÑADIR ESTILOS DESDE JAVASCRIPT y concatenandolos los que en java seria interpolar valores
+// *cuanod vamos a interpolar estilos se pueden hacer de diferente formas (1) directamente y (2) usando constantes y comillas `` intercaladas  
+
+const backgroung = 'yellow'
+const color = 'red'
+const isAutorized = true;
+
+let button1 = document.createElement("button");
+button1.innerText = "Boton1";
+button1.style = "background: red ; color: white"
+
+let button2 = document.createElement('botton');
+button2.innerText= "Boton2";
+// *se lee si bg es true pintalo de yellow, (? = si no) pintalo de azul
+button2.style = `background: ${isAutorized ? backgroung: 'blue'}; color: ${color}`
+
+document.body.append(button1);
+document.body.append(button2);
