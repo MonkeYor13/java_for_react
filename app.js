@@ -199,21 +199,58 @@
 // });
 // document.body.append(buttonReturn);
 
-// AÑADIR ESTILOS DESDE JAVASCRIPT y concatenandolos los que en java seria interpolar valores
-// *cuanod vamos a interpolar estilos se pueden hacer de diferente formas (1) directamente y (2) usando constantes y comillas `` intercaladas  
+// // AÑADIR ESTILOS DESDE JAVASCRIPT y concatenandolos los que en java seria interpolar valores
+// // *cuanod vamos a interpolar estilos se pueden hacer de diferente formas (1) directamente y (2) usando constantes y comillas `` intercaladas
 
-const backgroung = 'yellow'
-const color = 'red'
-const isAutorized = true;
+// const backgroung = 'yellow'
+// const color = 'red'
+// const isAutorized = true;
 
-let button1 = document.createElement("button");
-button1.innerText = "Boton1";
-button1.style = "background: red ; color: white"
+// let button1 = document.createElement("button");
+// button1.innerText = "Boton1";
+// button1.style = "background: red ; color: white"
 
-let button2 = document.createElement('botton');
-button2.innerText= "Boton2";
-// *se lee si bg es true pintalo de yellow, (? = si no) pintalo de azul
-button2.style = `background: ${isAutorized ? backgroung: 'blue'}; color: ${color}`
+// let button2 = document.createElement('botton');
+// button2.innerText= "Boton2";
+// // *se lee si bg es true pintalo de yellow, (? = si no) pintalo de azul
+// button2.style = `background: ${isAutorized ? backgroung: 'blue'}; color: ${color}`
 
-document.body.append(button1);
-document.body.append(button2);
+// document.body.append(button1);
+// document.body.append(button2);
+
+// ARRAY ARREGLOS en react no se utiliza mucha los bucle for si no utilizamos metodos
+
+// const names = ['ryan', 'maria', 'peter']
+// const newArrys = ['Luis', 'juana', 'mario']
+
+// // bucle for, no se usa mucho en react
+// for (let i = 0; i < names.length; i++) {
+// 	const element = names[i];
+// 	console.log(element)
+// }
+// // hacerlos con metodo menos lineas de codigo
+// names.forEach(function (name) {
+// 	console.log(name)
+// })
+// // en react se utiliza varios metodos ocn lso array (map, find, concat)
+// const newNames= names.map(function (name) {
+// 	return `Hola ${name}`
+// })
+// console.log(newNames)
+
+// const newFound= names.find(function (name) {
+// 	if (name=== 'maria') {
+// 		return name
+// 	}
+// })
+// console.log(newFound)
+// // juntar 2 arreglos en uno con la funcion concat
+// console.log(names.concat(newArrys))
+
+// SPRED OPERATOR concatenar de una manera mas practica, sep uede hacer con arrys y objetos
+
+const names = ["ryan", "maria", "peter"];
+const newArrys = ["Luis", "juana", "mario"];
+
+console.log([...names, ...newArrys]);
+console.log(...names, ...newArrys);
