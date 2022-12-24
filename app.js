@@ -247,10 +247,23 @@
 // // juntar 2 arreglos en uno con la funcion concat
 // console.log(names.concat(newArrys))
 
-// SPRED OPERATOR concatenar de una manera mas practica, sep uede hacer con arrys y objetos
+// // SPRED OPERATOR concatenar de una manera mas practica, sep uede hacer con arrys y objetos
 
-const names = ["ryan", "maria", "peter"];
-const newArrys = ["Luis", "juana", "mario"];
+// const names = ["ryan", "maria", "peter"];
+// const newArrys = ["Luis", "juana", "mario"];
 
-console.log([...names, ...newArrys]);
-console.log(...names, ...newArrys);
+// console.log([...names, ...newArrys]);
+// console.log(...names, ...newArrys);
+
+// ECMASCRIPT MODULES esto sifinifica dividir una aplicacion en multiples archivos como en Flutter, es importar y incluir archivos en otros por ejemplo creamos una archivo add.js y lo exportamos y luego agregamos app.js importandolo.
+
+import { add, active, point, title, multiply } from "./add.js";
+
+console.log(add(2, 5));
+console.log(multiply(2, 5));
+console.log(active, point, title);
+
+// si queremos importa lago por defecto del archivo creado 
+import nombreCualquiera from  "./add.js"
+
+console.log(nombreCualquiera);
